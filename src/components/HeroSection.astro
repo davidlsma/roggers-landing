@@ -28,12 +28,12 @@
   </div>
 
   <!-- Info bar -->
-  <div class="label-sm" style="color: rgba(255,255,255,0.4); position: absolute; bottom: 2rem; left: 0; right: 0; padding: 0 clamp(1rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; z-index: 10;">
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+  <div class="label-sm hero-info-bar" style="color: rgba(255,255,255,0.4); position: absolute; bottom: 2rem; left: 0; right: 0; padding: 0 clamp(1rem, 4vw, 3rem); z-index: 10;">
+    <div class="hero-info-horarios">
       <span>Dom – Jue &nbsp;20:00 – 02:00</span>
       <span>Vie – Sáb &nbsp;20:00 – 03:00</span>
     </div>
-    <span>Av. Libertador 2499, San Juan</span>
+    <span class="hero-info-address">Av. Libertador 2499, San Juan</span>
   </div>
 </section>
 
@@ -42,5 +42,29 @@
   .hero-btns .btn-ghost {
     font-size: 1rem;
     padding: 1rem 2.5rem;
+  }
+
+  .hero-info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-info-horarios {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 640px) {
+    .hero-info-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+    .hero-info-horarios {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
   }
 </style>

@@ -13,13 +13,13 @@
       height="1350"
       class="w-full h-full object-cover object-center"
     />
-    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.92) 50%, rgba(10,10,10,0.6) 100%)"></div>
+    <div class="absolute inset-0 reservas-overlay"></div>
   </div>
 
   <div class="site-container relative z-10">
     <div class="w-full">
       <p class="label-sm mb-3 fade-in" style="color: var(--color-primary)">¿Venís esta noche?</p>
-      <h2 class="text-white mb-5 fade-in fade-in-delay-1" style="font-family: 'Bebas Neue', system-ui; font-size: clamp(3rem, 8vw, 8rem); line-height: 0.95; white-space: nowrap;">RESERVÁ TU MESA</h2>
+      <h2 class="text-white mb-5 fade-in fade-in-delay-1" style="font-family: 'Bebas Neue', system-ui; font-size: clamp(2.5rem, 8vw, 8rem); line-height: 0.95;">RESERVÁ TU MESA</h2>
       <div class="flex flex-col sm:flex-row gap-4">
         <a
           href="https://api.whatsapp.com/send?phone=5492645015568"
@@ -37,3 +37,14 @@
     </div>
   </div>
 </section>
+
+<style>
+  .reservas-overlay {
+    background: linear-gradient(to right, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.92) 50%, rgba(10,10,10,0.6) 100%);
+  }
+  @media (max-width: 640px) {
+    .reservas-overlay {
+      background: rgba(10,10,10,0.88);
+    }
+  }
+</style>
