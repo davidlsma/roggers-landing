@@ -1,0 +1,71 @@
+---
+const stats = [
+  { value: '5+', label: 'Años en San Juan' },
+  { value: '7', label: 'Noches a la semana' },
+  { value: '100%', label: 'Buena vibra' },
+];
+---
+
+<section id="experiencia" class="section-py" style="background-color: var(--color-surface-low)">
+  <div class="site-container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Texto -->
+      <div>
+        <p class="label-sm mb-4 fade-in" style="color: var(--color-primary)">Nuestro espacio</p>
+        <h2 class="heading-xl text-white mb-8 fade-in fade-in-delay-1">
+          LA EXPERIENCIA<br />ROGGER'S
+        </h2>
+
+        <div class="space-y-4 mb-10" style="color: var(--color-on-surface-muted)">
+          <p class="body-lg">
+            Rogger's nació de una idea simple: crear el lugar que nos gustaría encontrar cuando
+            salimos. Buena música que no te impide hablar, cocina de bar que realmente vale la
+            pena, y tragos preparados con identidad.
+          </p>
+          <p class="body-lg">
+            Cada rincón fue pensado para que la noche fluya. La barra iluminada donde los
+            bartenders trabajan a la vista. Las mesas amplias para grupos que quieren compartir
+            algo rico. Un ambiente moderno, sin pretensiones, pero con carácter.
+          </p>
+          <p class="body-lg">
+            Si estás buscando el lugar para empezar la noche, celebrar algo o simplemente salir
+            a comer bien en San Juan — llegaste.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-10 mb-10">
+          {stats.map(stat => (
+            <div>
+              <p class="text-4xl font-black text-white" style="font-family: 'Bebas Neue', system-ui">{stat.value}</p>
+              <p class="label-sm mt-1" style="color: var(--color-on-surface-muted)">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href="https://wa.me/542645015568?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Rogger%27s"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Reservá tu mesa
+        </a>
+      </div>
+
+      <!-- Imagen real del lugar -->
+      <div class="rounded-2xl overflow-hidden h-[460px] lg:h-[580px]">
+        <img
+          src="/images/roggers/experiencia.jpg"
+          alt="Ambiente del Rogger's Resto Bar de noche, con gente disfrutando en el patio"
+          loading="lazy"
+          width="1080"
+          height="1350"
+          class="w-full h-full object-cover object-center"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

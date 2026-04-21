@@ -1,0 +1,42 @@
+---
+const items = [
+  { src: '/images/roggers/galeria46.jpg', alt: 'Grupo de amigas brindando en Rogger\'s', wide: true },
+  { src: '/images/roggers/galeria5.jpg',  alt: 'Ambiente nocturno interior de Rogger\'s' },
+  { src: '/images/roggers/galeria1.jpg',  alt: 'Mesas llenas en el patio exterior de Rogger\'s' },
+  { src: '/images/roggers/galeria7.jpg',  alt: 'Fachada de Rogger\'s Resto Bar de noche' },
+  { src: '/images/roggers/galeria2.jpg',  alt: 'Vista exterior de Rogger\'s con gente en la vereda' },
+];
+---
+
+<section id="galeria" class="section-py" style="background-color: var(--color-surface)">
+  <div class="site-container">
+    <p class="label-sm mb-3 fade-in" style="color: var(--color-primary)">El lugar</p>
+    <h2 class="heading-xl text-white mb-12 fade-in fade-in-delay-1">GALERÍA</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      {items.map((item, i) => (
+        <div class={`gallery-item rounded-xl overflow-hidden ${i === 0 ? 'col-span-2 md:col-span-1 row-span-2' : ''}`}>
+          <img
+            src={item.src}
+            alt={item.alt}
+            loading="lazy"
+            width="1080"
+            height="1350"
+            class={`gallery-img w-full object-cover ${i === 0 ? 'h-full' : 'aspect-square'}`}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery-img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.8);
+  }
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.04);
+    filter: brightness(1);
+  }
+</style>

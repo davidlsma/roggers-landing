@@ -1,0 +1,46 @@
+---
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex flex-col items-center justify-end" style="padding-bottom: 0; position: relative;"
+>
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/roggers/principal.jpg"
+      alt=""
+      loading="eager"
+      width="1080"
+      height="1350"
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="site-container z-10 w-full text-center" style="position: static;">
+    <p class="label-sm mb-25" style="color: var(--color-primary)">San Juan · Argentina</p>
+
+    <p style="color: rgba(255,255,255,0.65); font-size: clamp(1.6rem, 3.2vw, 2.25rem); font-family: 'Bebas Neue', system-ui; letter-spacing: 0.05em; margin-bottom: 5rem;">
+      Noches con sabor &amp; buena música
+    </p>
+  </div>
+
+  <!-- Info bar -->
+  <div class="label-sm" style="color: rgba(255,255,255,0.4); position: absolute; bottom: 2rem; left: 0; right: 0; padding: 0 clamp(1rem, 4vw, 3rem); display: flex; justify-content: space-between; align-items: center; z-index: 10;">
+    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+      <span>Dom – Jue &nbsp;20:00 – 02:00</span>
+      <span>Vie – Sáb &nbsp;20:00 – 03:00</span>
+    </div>
+    <span>Av. Libertador 2499, San Juan</span>
+  </div>
+</section>
+
+<style>
+  .hero-btns .btn-primary,
+  .hero-btns .btn-ghost {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+const horarios = [
+  { dias: 'Domingo – Jueves', horario: '20:00 – 02:00' },
+  { dias: 'Viernes – Sábado', horario: '20:00 – 03:00' },
+];
+---
+
+<section id="ubicacion" class="section-py" style="background-color: var(--color-surface)">
+  <div class="site-container">
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+
+      <!-- Columna izquierda: Horarios -->
+      <div>
+        <p class="label-sm mb-3 fade-in" style="color: var(--color-primary)">Cuando estamos</p>
+        <h2 class="text-white mb-10 fade-in fade-in-delay-1" style="font-family: 'Bebas Neue', system-ui; font-size: clamp(2.5rem, 6vw, 6rem); line-height: 0.95;">HORARIOS</h2>
+
+        <div>
+          {horarios.map(h => (
+            <div class="flex justify-between items-center py-5" style="border-bottom: 1px solid var(--color-surface-high)">
+              <span class="text-lg" style="color: var(--color-on-surface-muted)">{h.dias}</span>
+              <span class="text-xl font-bold text-white">{h.horario}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Columna derecha: Ubicación -->
+      <div>
+        <p class="label-sm mb-3" style="color: var(--color-primary)">Encontranos</p>
+        <h2 class="text-white mb-6" style="font-family: 'Bebas Neue', system-ui; font-size: clamp(2.5rem, 6vw, 6rem); line-height: 0.95;">UBICACIÓN</h2>
+
+        <p class="text-white text-xl font-medium mb-6">Av. Libertador Gral. San Martín 2499</p>
+
+        <div class="rounded-xl overflow-hidden w-full" style="height: 350px;">
+          <iframe
+            src="https://www.google.com/maps?q=Av.+Libertador+Gral.+San+Martín+2499,+San+Juan,+Argentina&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0; filter: grayscale(30%);"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Rogger's Resto Bar"
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

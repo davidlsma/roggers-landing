@@ -1,0 +1,85 @@
+---
+const destacados = [
+  {
+    id: 'tabla-rustica',
+    nombre: 'Tabla Rústica',
+    descripcion: 'Fiambres seleccionados, quesos, aceitunas y pan artesanal. Para compartir.',
+    imagen: '/images/roggers/comida5.jpg',
+  },
+  {
+    id: 'hamburguesa',
+    nombre: "Hamburguesa Rogger's",
+    descripcion: 'Medallón 200g, cheddar fundido, panceta crocante y salsa especial.',
+    imagen: '/images/roggers/comida3.jpg',
+  },
+  {
+    id: 'lomo',
+    nombre: 'Lomo a la Pimienta',
+    descripcion: 'Tierno lomo de res al punto, salsa de pimienta verde y papas rústicas.',
+    imagen: '/images/roggers/comida1.jpg',
+  },
+  {
+    id: 'alitas',
+    nombre: 'Alitas BBQ',
+    descripcion: 'Alitas de pollo a la parrilla con salsa BBQ ahumada.',
+    imagen: '/images/roggers/comida4.jpg',
+  },
+];
+---
+
+<section id="menu" class="section-py" style="background-color: var(--color-surface)">
+  <div class="site-container">
+    <p class="label-sm mb-3 fade-in" style="color: var(--color-primary)">Lo que hacemos bien</p>
+    <h2 class="heading-xl text-white mb-12 fade-in fade-in-delay-1">PLATOS DESTACADOS</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {destacados.map(item => (
+        <article class="menu-card rounded-xl overflow-hidden">
+          <!-- Imagen grande con overlay de texto -->
+          <div class="menu-card-inner relative aspect-[3/4] overflow-hidden">
+            <img
+              src={item.imagen}
+              alt={item.nombre}
+              loading="lazy"
+              width="800"
+              height="1000"
+              class="menu-card-img w-full h-full object-cover"
+            />
+            <!-- Overlay gradiente con nombre y descripción -->
+            <div class="menu-card-overlay absolute inset-0 flex flex-col justify-end p-5">
+              <h3 class="font-black text-white text-lg leading-tight">{item.nombre}</h3>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="text-center mb-6" style="margin-top: 3rem">
+      <p class="body-lg" style="color: var(--color-on-surface-muted)">
+        Descubrí nuestros platos, tragos y promociones especiales. También podés realizar tu pedido directamente desde el menú online.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <a
+        href="https://menu.fu.do/roggers?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn5IAEm8q4vS9DAXDjebUGmVugoOz1D_PpSRP2DT3kcMCSFlE8rSa3ztcIrmk_aem_VUQTfV5C7qUgLzsXlaosmg"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        Ver Menú Completo
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .menu-card-img {
+    transition: transform 0.4s ease;
+  }
+  .menu-card:hover .menu-card-img {
+    transform: scale(1.04);
+  }
+  .menu-card-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+  }
+</style>
