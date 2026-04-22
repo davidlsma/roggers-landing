@@ -3,7 +3,7 @@
 
 <section
   id="hero"
-  class="relative min-h-screen flex flex-col items-center justify-end" style="padding-bottom: 4rem;"
+  class="relative min-h-screen flex flex-col items-center justify-end" style="padding-bottom: 1.5rem;"
 >
   <!-- Background -->
   <div class="absolute inset-0 z-0">
@@ -22,9 +22,19 @@
   <div class="site-container z-10 w-full text-center">
     <p class="label-sm mb-6" style="color: var(--color-primary)">San Juan · Argentina</p>
 
-    <p class="hero-title">
+    <p class="hero-title mb-8">
       Noches con sabor &amp; buena música
     </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="/#reservas" class="btn-primary">Reservar mesa</a>
+      <a
+        href="https://menu.fu.do/roggers?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn5IAEm8q4vS9DAXDjebUGmVugoOz1D_PpSRP2DT3kcMCSFlE8rSa3ztcIrmk_aem_VUQTfV5C7qUgLzsXlaosmg"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-ghost"
+      >Ver menú</a>
+    </div>
   </div>
 </section>
 
@@ -34,12 +44,18 @@
     font-family: 'Bebas Neue', system-ui;
     letter-spacing: 0.04em;
     line-height: 1.05;
-    font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
   }
 
   @media (max-width: 640px) {
     .hero-title {
-      font-size: clamp(2.4rem, 11vw, 3.5rem);
+      font-size: clamp(1.8rem, 8.5vw, 2.6rem);
     }
+  }
+
+  #hero .btn-primary,
+  #hero .btn-ghost {
+    font-size: 0.7rem;
+    padding: 0.7rem 1.4rem;
   }
 </style>
